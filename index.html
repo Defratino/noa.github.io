@@ -70,7 +70,7 @@
                             <p class="text-gray-400">Berklee Performance Center</p>
                             <p class="text-gray-400">8:00 PM</p>
                         </div>
-                        <a href="https://www.etix.com/ticket/p/37785674/" class="mt-4 md:mt-0 inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">Tickets</a>
+                        <a href="https://www.etix.com/ticket/p/37785674/" target="_blank" rel="noopener noreferrer" class="mt-4 md:mt-0 inline-block bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-2 px-6 rounded-full transition-colors duration-300">Tickets</a>
                     </div>
                     <!-- Show Item 2 -->
                     <div class="flex flex-col md:flex-row items-center bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -143,7 +143,7 @@
                 <h2 class="text-4xl font-bold text-white text-center mb-10">Booking & Contact</h2>
                 <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
                     <div class="md:w-1/2 w-full">
-                        <form action="https://formspree.io/f/xdappgaq" method="POST" class="space-y-6">
+                        <form id="contactForm" action="https://formspree.io/f/xdappgaq" method="POST" class="space-y-6" target="_blank">
                             <div>
                                 <label for="name" class="block text-lg font-medium text-gray-300">Full Name</label>
                                 <input type="text" id="name" name="name" class="mt-1 block w-full bg-gray-700 border-gray-600 text-white rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 p-3">
@@ -175,9 +175,9 @@
     <footer class="bg-gray-900 border-t border-gray-800">
         <div class="container mx-auto px-6 py-8 text-center text-gray-400">
             <div class="flex justify-center space-x-6 mb-4">
-                <a href="https://www.instagram.com/noashnaidman?igsh=MWxuNzJkcWZpdDBtYQ%3D%3D&utm_source=qr" class="hover:text-white">Instagram</a>
-                <a href="https://www.facebook.com/noa.shnaidman" class="hover:text-white">Facebook</a>
-                <a href="https://www.youtube.com/channel/UCu_M470dPQSSfgXoCWIOY7A" class="hover:text-white">YouTube</a>
+                <a href="https://www.instagram.com/noashnaidman?igsh=MWxuNzJkcWZpdDBtYQ%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" class="hover:text-white">Instagram</a>
+                <a href="https://www.facebook.com/noa.shnaidman" target="_blank" rel="noopener noreferrer" class="hover:text-white">Facebook</a>
+                <a href="https://www.youtube.com/channel/UCu_M470dPQSSfgXoCWIOY7A" target="_blank" rel="noopener noreferrer" class="hover:text-white">YouTube</a>
             </div>
             <p>&copy; 2026 NOA. All Rights Reserved.</p>
         </div>
@@ -190,5 +190,17 @@
         </svg>
     </a>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function() {
+                    setTimeout(() => {
+                        contactForm.reset();
+                    }, 100);
+                });
+            }
+        });
+    </script>
 </body>
 </html>

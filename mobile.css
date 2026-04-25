@@ -11,13 +11,17 @@
         right: -250px; /* Start off-screen */
         width: 250px;
         height: 100%;
-        background-color: rgba(17, 24, 39, 0.5);
+        background-color: rgb(17, 24, 39);
         transition: right 0.3s ease-in-out;
         z-index: 100;
     }
 
     #mobile-menu.show {
         right: 0; /* Slide in */
+    }
+
+    #mobile-menu a {
+        font-size: 1rem; /* text-base in tailwind */
     }
 
     .mobile-font-size {

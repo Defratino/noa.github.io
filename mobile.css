@@ -1,0 +1,22 @@
+/* CSS for mobile-specific styles */
+
+@media (max-width: 767px) {
+    #home h1 {
+        display: none;
+    }
+
+    #mobile-menu {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off-screen */
+        width: 250px;
+        height: 100%;
+        background-color: rgba(17, 24, 39, 0.95);
+        transition: right 0.3s ease-in-out;
+        z-index: 100;
+    }
+
+    #mobile-menu.show {
+        right: 0; /* Slide in */
+    }
+}

@@ -19,4 +19,9 @@
     #mobile-menu.show {
         right: 0; /* Slide in */
     }
+
+    .mobile-font-size {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
 }

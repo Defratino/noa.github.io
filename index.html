@@ -45,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden">
+        <div id="mobile-menu" class="md:hidden">
             <a href="#home" class="block py-2 px-4 text-sm hover:bg-gray-700">Home</a>
             <a href="about.html" class="block py-2 px-4 text-sm hover:bg-gray-700">About</a>
             <a href="original-songs.html" class="block py-2 px-4 text-sm hover:bg-gray-700">Original Songs</a>
@@ -70,7 +70,7 @@
         <!-- Short Bio Section -->
         <section id="short-bio" class="py-20 bg-gray-800">
             <div class="container mx-auto px-6 text-center max-w-4xl">
-                <p class="text-3xl leading-relaxed text-gray-100">
+                <p id="short-bio-p" class="text-3xl leading-relaxed text-gray-100 mobile-font-size">
                     Noa Shnaidman is an Israeli-born vocalist and songwriter. Having grown up between Israel and the United States, her music reflects a cross-cultural blend of jazz, R&B, and soul.
                 </p>
             </div>
@@ -179,7 +179,7 @@
             const mobileMenu = document.getElementById('mobile-menu');
 
             mobileMenuButton.addEventListener('click', function() {
-                mobileMenu.classList.toggle('hidden');
+                mobileMenu.classList.toggle('show');
             });
         });
     </script>
